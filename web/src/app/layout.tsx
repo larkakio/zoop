@@ -16,7 +16,11 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const baseAppId = process.env.NEXT_PUBLIC_BASE_APP_ID ?? "";
+/** Base.dev app id (public; used for discovery / URL verification). */
+const DEFAULT_BASE_APP_ID = "69c8ecc24f53013db0ef27aa";
+
+const baseAppId =
+  process.env.NEXT_PUBLIC_BASE_APP_ID?.trim() || DEFAULT_BASE_APP_ID;
 
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ??
@@ -32,7 +36,7 @@ export const metadata: Metadata = {
     description: "Mobile-first grid game on Base.",
     images: ["/og-zoop.svg"],
   },
-  other: baseAppId ? { "base:app_id": baseAppId } : {},
+  other: { "base:app_id": baseAppId },
 };
 
 export default async function RootLayout({
