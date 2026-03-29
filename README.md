@@ -2,6 +2,8 @@
 
 Mobile-first grid game on [Base](https://base.org) with daily on-chain check-in.
 
+**Live:** [zoop-pi.vercel.app](https://zoop-pi.vercel.app)
+
 ## Structure
 
 - `web/` — Next.js app (Vercel root directory)

@@ -19,7 +19,8 @@ const geistMono = Geist_Mono({
 const baseAppId = process.env.NEXT_PUBLIC_BASE_APP_ID ?? "";
 
 const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ?? "http://localhost:3000";
+  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ??
+  "https://zoop-pi.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
