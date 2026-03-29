@@ -1,0 +1,12 @@
+# Compiler files
+cache/
+out/
+
+# Deployment logs (do not commit — may reference local keys / deployment metadata)
+broadcast/
+
+# Docs
+docs/
+
+# Dotenv file
+.env

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4c1d95"/>
+      <stop offset="50%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#164e63"/>
+    </linearGradient>
+    <linearGradient id="t" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f0abfc"/>
+      <stop offset="100%" style="stop-color:#67e8f9"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <text x="80" y="200" font-size="120" font-weight="900" font-family="system-ui,sans-serif" fill="url(#t)">Zoop</text>
+  <text x="80" y="280" font-size="36" fill="#a1a1aa" font-family="system-ui,sans-serif">Swipe the grid on Base</text>
+  <circle cx="980" cy="315" r="140" fill="#22d3ee" opacity="0.2"/>
+  <circle cx="920" cy="360" r="90" fill="#e879f9" opacity="0.35"/>
+</svg>
