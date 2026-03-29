@@ -16,11 +16,9 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-/** Base.dev app id (public; used for discovery / URL verification). */
-const DEFAULT_BASE_APP_ID = "69c8ecc24f53013db0ef27aa";
-
+/** Base.dev ownership / app binding (also set NEXT_PUBLIC_BASE_APP_ID on Vercel). */
 const baseAppId =
-  process.env.NEXT_PUBLIC_BASE_APP_ID?.trim() || DEFAULT_BASE_APP_ID;
+  process.env.NEXT_PUBLIC_BASE_APP_ID?.trim() || "69c8ecc24f53013db0ef27aa";
 
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ??
@@ -36,7 +34,6 @@ export const metadata: Metadata = {
     description: "Mobile-first grid game on Base.",
     images: ["/og-zoop.svg"],
   },
-  other: { "base:app_id": baseAppId },
 };
 
 export default async function RootLayout({
@@ -50,6 +47,9 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
+      <head>
+        <meta name="base:app_id" content={baseAppId} />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} min-h-dvh antialiased`}
       >
